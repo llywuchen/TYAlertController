@@ -77,7 +77,7 @@
 #define kAlertViewWidth 280
 #define kContentViewEdge 15
 #define kContentViewSpace 15
-
+#define kTitleViewSpace 15
 #define kTextLabelSpace  6
 
 #define kButtonTagOffset 1000
@@ -132,6 +132,7 @@
     self.backgroundColor = [UIColor whiteColor];
     _alertViewWidth = kAlertViewWidth;
     _contentViewSpace = kContentViewSpace;
+    _titleViewSpace = kTitleViewSpace;
     
     _textLabelSpace = kTextLabelSpace;
     _textLabelContentViewEdge = kContentViewEdge;
@@ -296,7 +297,7 @@
     // textContentView
     _textContentView.translatesAutoresizingMaskIntoConstraints = NO;
     
-    [self addConstraintWithView:_textContentView topView:self leftView:self bottomView:nil rightView:self edgeInset:UIEdgeInsetsMake(_contentViewSpace, _textLabelContentViewEdge, 0, -_textLabelContentViewEdge)];
+    [self addConstraintWithView:_textContentView topView:self leftView:self bottomView:nil rightView:self edgeInset:UIEdgeInsetsMake(_titleViewSpace, _textLabelContentViewEdge, 0, -_textLabelContentViewEdge)];
     
     // textFieldContentView
     _textFieldContentView.translatesAutoresizingMaskIntoConstraints = NO;

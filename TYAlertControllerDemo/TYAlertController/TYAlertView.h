@@ -31,6 +31,7 @@ typedef NS_ENUM(NSUInteger, TYAlertActionStyle) {
 
 @property (nonatomic, weak, readonly) UILabel *titleLable;
 @property (nonatomic, weak, readonly) UILabel *messageLabel;
+@property (nonatomic, assign) CGFloat titleViewSpace;
 
 // alertView textfield array
 @property (nonatomic, strong, readonly) NSArray *textFieldArray;
