@@ -12,24 +12,30 @@
 
 @interface TYAlertAction ()
 @property (nonatomic, strong) NSString *title;
+@property (nonatomic, strong) UIColor *titleColor;
 @property (nonatomic, assign) TYAlertActionStyle style;
 @property (nonatomic, copy) void (^handler)(TYAlertAction *);
 @end
 
 @implementation TYAlertAction
 
-+ (instancetype)actionWithTitle:(NSString *)title style:(TYAlertActionStyle)style handler:(void (^)(TYAlertAction *))handler
-{
-    return [[self alloc]initWithTitle:title style:style handler:handler];
++ (instancetype)actionWithTitle:(NSString *)title style:(TYAlertActionStyle)style handler:(void (^)(TYAlertAction *action))handler{
+    return [self actionWithTitle:title titleColor:[UIColor whiteColor] style:style handler:handler];
 }
 
-- (instancetype)initWithTitle:(NSString *)title style:(TYAlertActionStyle)style handler:(void (^)(TYAlertAction *))handler
++ (instancetype)actionWithTitle:(NSString *)title titleColor:(UIColor *)color style:(TYAlertActionStyle)style handler:(void (^)(TYAlertAction *))handler
+{
+    return [[self alloc]initWithTitle:title titleColor:color style:style handler:handler];
+}
+
+- (instancetype)initWithTitle:(NSString *)title titleColor:(UIColor *)color style:(TYAlertActionStyle)style handler:(void (^)(TYAlertAction *))handler
 {
     if (self = [super init]) {
         _title = title;
         _style = style;
         _handler = handler;
         _enabled = YES;
+        _titleColor = color;
         
     }
     return self;
@@ -40,6 +46,7 @@
     TYAlertAction *action = [[self class]allocWithZone:zone];
     action.title = self.title;
     action.style = self.style;
+    action.titleColor = self.titleColor;
     return action;
 }
 
@@ -216,6 +223,7 @@
     button.clipsToBounds = YES;
     button.layer.cornerRadius = _buttonCornerRadius;
     [button setTitle:action.title forState:UIControlStateNormal];
+    [button setTitleColor:action.titleColor forState:UIControlStateNormal];
     button.titleLabel.font = _buttonFont;
     button.backgroundColor = [self buttonBgColorWithStyle:action.style];
     button.enabled = action.enabled;

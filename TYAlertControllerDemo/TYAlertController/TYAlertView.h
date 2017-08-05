@@ -18,6 +18,8 @@ typedef NS_ENUM(NSUInteger, TYAlertActionStyle) {
 
 + (instancetype)actionWithTitle:(NSString *)title style:(TYAlertActionStyle)style handler:(void (^)(TYAlertAction *action))handler;
 
++ (instancetype)actionWithTitle:(NSString *)title titleColor:(UIColor *)color style:(TYAlertActionStyle)style handler:(void (^)(TYAlertAction *action))handler;
+
 @property (nonatomic, readonly) NSString *title;
 @property (nonatomic, readonly) TYAlertActionStyle style;
 @property (nonatomic, getter=isEnabled) BOOL enabled;
