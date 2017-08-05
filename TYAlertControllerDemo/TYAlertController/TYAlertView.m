@@ -360,7 +360,7 @@
         // setup textFieldContentView
         _textFieldContentView.backgroundColor = _textFieldBackgroudColor;
         _textFieldContentView.layer.masksToBounds = YES;
-        _textFieldContentView.layer.cornerRadius = 4;
+        _textFieldContentView.layer.cornerRadius = _textFieldCornerRadius;
         _textFieldContentView.layer.borderWidth = _textFieldBorderWidth;
         _textFieldContentView.layer.borderColor = _textFieldBorderColor.CGColor;
         _textFieldTopConstraint.constant = -_contentViewSpace;

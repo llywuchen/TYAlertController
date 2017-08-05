@@ -57,6 +57,7 @@ typedef NS_ENUM(NSUInteger, TYAlertActionStyle) {
 // textField custom
 @property (nonatomic, strong) UIColor *textFieldBorderColor;
 @property (nonatomic, strong) UIColor *textFieldBackgroudColor;
+@property (nonatomic, assign) CGFloat textFieldCornerRadius;
 @property (nonatomic, strong) UIFont *textFieldFont;
 @property (nonatomic, assign) CGFloat textFieldHeight;
 @property (nonatomic, assign) CGFloat textFieldEdge;
