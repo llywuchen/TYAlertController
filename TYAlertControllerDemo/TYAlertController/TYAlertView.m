@@ -68,7 +68,8 @@
 // button content View
 @property (nonatomic, weak) UIView *buttonContentView;
 @property (nonatomic, weak) NSLayoutConstraint *buttonTopConstraint;
-@property (nonatomic, strong) NSMutableArray *buttons;
+
+@property (nonatomic, strong ,readwrite) NSMutableArray *buttons;
 @property (nonatomic, strong) NSMutableArray *actions;
 
 @end

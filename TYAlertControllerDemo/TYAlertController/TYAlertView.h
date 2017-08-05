@@ -35,6 +35,8 @@ typedef NS_ENUM(NSUInteger, TYAlertActionStyle) {
 // alertView textfield array
 @property (nonatomic, strong, readonly) NSArray *textFieldArray;
 
+@property (nonatomic, strong ,readonly) NSMutableArray *buttons;
+
 // default 280, if 0 don't add width constraint,
 @property (nonatomic, assign) CGFloat alertViewWidth;
 
