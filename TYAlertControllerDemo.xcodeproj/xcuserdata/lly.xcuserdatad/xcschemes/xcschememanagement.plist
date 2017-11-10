@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>TYAlertController.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>TYAlertControllerDemo.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,6 +17,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>0A310F741FB5A801005F7D7F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>D358541D1B9532D700B5FA1F</key>
 		<dict>
 			<key>primary</key>
